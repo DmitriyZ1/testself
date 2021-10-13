@@ -1,0 +1,129 @@
+
+$color-er:  #E46868;
+$color-ok: #82ce64;
+$color-num: #8a43cd;
+
+
+
+.box{
+    display: flex;
+    margin: 20px auto;
+    width: 800px;
+    height: 646px;
+    background: #F2EFEF;
+    box-shadow: 5px 5px 5px rgba(0, 0, 255, .2);
+    &__panel{
+        position: relative;
+        width: 548px;
+        height: 645px;   
+        &__vopros{
+            margin: 40px auto;
+            width: 510px;
+            height: 199px; 
+            background: #F2EFEF;
+            p{
+                padding: 10px 20px;
+                font-size: 36px;
+                font-family:Verdana, Geneva, Tahoma, sans-serif
+            }
+        }
+        input{
+            outline: none;
+            position: relative;
+            top: 100px;
+            left: 22px;
+            width: 496px;
+            height: 58px;
+            border: none;
+            box-shadow: 4px 4px 5px rgba(122,122,122,0.5);
+            font-size: 36px ;
+            color: #9F9292;
+        }
+        button{
+            outline: none;
+            position: relative;
+            border: none;
+            background: #6E9EFC;
+            width: 139px;
+            height: 52px;
+            top: 124px;
+            left: 22px;
+            font-size: 36px;
+            cursor: pointer;
+            &:hover{
+                background: #4f83e8; 
+            }
+            &:active {
+                box-shadow: inset 2px 2px 5px , inset 1px 1px 5px;
+              }
+        }
+        .push{
+            box-shadow: inset 2px 2px 5px , inset 1px 1px 5px;
+        }        
+        .link{
+            position: relative;
+            left: 207px;
+            top: 240px;
+            color: rgb(135, 128, 238);
+            font-size: 20px;
+            &:hover{
+                color: #303847; 
+            }
+            
+            
+        }
+        .notactive{
+            color: #bdbdbf;
+            pointer-events: none;
+        }
+    
+    }
+
+    &__bar{
+        display: flex;
+        font-weight: bold;
+        flex-direction: column;
+        align-items: stretch;
+        width: 251px;
+        height: 646px; 
+        background: #C0DDDA;
+        &__chbox{
+            position: relative;
+            top: 84px;
+            width: 190px;
+            height: 190px;
+            font-size: 18px;
+            li{
+                padding: 3px;
+                list-style-type: none;
+                color: #4F4F4F ;
+                label{
+                    cursor: pointer;
+                }
+            }
+        }
+        &__result{
+            position: relative;
+            top: 84px;
+            width: 213px;
+            height: 176px;
+            font-size: 18px;
+            li{
+                padding: 3px;
+                list-style-type: none;
+                color: #4F4F4F ;
+                .green{
+                    color: $color-num;
+                }
+                
+                .blue{
+                    color: $color-ok;
+                }
+                
+                .red{
+                    color: $color-er ;
+                }
+            }
+        }
+    }
+}
