@@ -1,5 +1,5 @@
 import React, {useState, useEffect} from 'react';
-import { BrowserRouter as Router, Switch, Route } from 'react-router-dom'
+import {Switch, Route } from 'react-router-dom'
 
 import { useDispatch, useSelector } from 'react-redux';
 import { setGen } from './redux/actions/genres'; 
@@ -125,16 +125,16 @@ function App() {
     }
   }
   
+
   
   return (
       <MyContext.Provider value={{ vopros:showTasks, changOption:options, optionCheckbox, answerInput:clickform}}>
         <div className ="contain">
-          <Router>
-            <Switch>
-              <Route exact path="/" render={() => <Home/>} />
-              <Route exact path="/result" render={() => <Itog/>} />
-            </Switch>
-          </Router>
+          <Switch>
+            <Route exact path="/" render={() => <Home/>} />
+            <Route exact path="/result" render={() => <Itog/>} />
+          </Switch>
+          
         </div>
       </MyContext.Provider>
     
