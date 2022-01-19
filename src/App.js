@@ -16,7 +16,6 @@ import './style.scss';
 import { tasks } from './bd.json';
 
 
-
 function App() {
   
   const [optionCheckbox, setOptionCheckbox] = useState([true,true,true]);
@@ -31,9 +30,10 @@ function App() {
       exList: exRes.list,
     }
   })
-
   
-  useEffect (()  =>{
+  console.log(stateres.basic)
+
+  useEffect (()  => {
     let arr = [];
     if (optionCheckbox[0]) {
       let dom = tasks.filter(el => el.division === "dom");
@@ -79,7 +79,7 @@ function App() {
       let rand = Math.floor(Math.random() * t.length);
       return t[rand];
     }
-    else return;
+    else return ;
   }
 
   

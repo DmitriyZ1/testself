@@ -27,18 +27,25 @@ $color-num: #8a43cd;
                 font-family:Verdana, Geneva, Tahoma, sans-serif
             }
         }
-        input{
-            outline: none;
+        .box__input{
+            font-size: 26px ;
+            margin-left: 20px;
             position: relative;
-            top: 100px;
-            left: 22px;
-            width: 496px;
-            height: 58px;
-            border: none;
-            box-shadow: 4px 4px 5px rgba(122,122,122,0.5);
-            font-size: 36px ;
-            color: #9F9292;
+            top: 90px;
+            span{
+                color: gray;
+            }
+            input{
+                font-size: 26px ;
+                outline: none;
+                width: 200px;
+                height: 58px;
+                border: none;
+                background-color: #f2efef;
+                border-bottom: 1px solid black;
+            }
         }
+        
         button{
             outline: none;
             position: relative;

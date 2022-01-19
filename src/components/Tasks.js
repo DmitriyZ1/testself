@@ -32,20 +32,22 @@ function Tasks () {
     
     useEffect (()  =>{
         otvet.current.focus();
-    },[])  
+    }) 
     
     useEffect (()  =>{
-       otvet.current.value = vopros.good;
-    })  
-    
+        otvet.current.value = '';
+        otvet.current.placeholder = '**********';
+    }) 
     
     
     return (
-        <div className="box__panel" onKeyPress={pushbut}>
+        <div className="box__panel"  onKeyPress={pushbut}>
             <div className="box__panel__vopros">
                 <p> {vopros.vopros}</p>
             </div>
-            <input type="text" ref={otvet} />
+            <div className='box__input'>
+                <span>{vopros.before}</span><input type="text"  ref={otvet}  /><span>{vopros.after}</span>
+            </div>
             <button className={classNames('but', {'push': butact})} onClick={()=>{answerInput(otvet.current.value)}}> Ok </button>
             <Link to={'/result'} className={classNames('link' , {'notactive': (stateres.exList.length === 0) })}> Показат резльтаты </Link>
         </div>
